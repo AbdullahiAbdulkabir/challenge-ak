@@ -20,11 +20,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::post('/login', [LoginController::class, 'authenticateAdmin']);
+// Route::post('/login', [LoginController::class, 'authenticateAdmin']);
 Route::get('/dashboard', function () {
     return view('welcome');
 });
 
 Route::post('/upload', [ExcelUploadController::class, 'store']);
 Route::get('/showform', [ExcelUploadController::class, 'showForm']);
-// Route::post('/login', [, ])
