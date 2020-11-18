@@ -65,9 +65,8 @@ class QuestionsController extends Controller
             'message'=> 'An error occured.'
         ]);
 
-        // $token = JWTAuth::fromQuestion($question);
 
-        return response()->json(compact('question','token'),201);
+        return response()->json(compact('question'),201);
 
     }
 
