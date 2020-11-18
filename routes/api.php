@@ -5,9 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Question;
 use App\Http\Controllers\QuestionsController;
 use App\Http\Controllers\ExcelUploadController;
-use App\Http\Controllers\LoginController;
 
-Route::post('/login', [LoginController::class, 'login']);
+// Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

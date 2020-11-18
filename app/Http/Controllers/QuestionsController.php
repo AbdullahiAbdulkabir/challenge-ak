@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use JWTAuth;
 use App\Models\Question;
 use Validator;
 
@@ -66,7 +65,7 @@ class QuestionsController extends Controller
             'message'=> 'An error occured.'
         ]);
 
-        $token = JWTAuth::fromQuestion($question);
+        // $token = JWTAuth::fromQuestion($question);
 
         return response()->json(compact('question','token'),201);
 

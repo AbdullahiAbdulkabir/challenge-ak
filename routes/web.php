@@ -27,3 +27,6 @@ Route::get('/dashboard', function () {
 
 Route::post('/upload', [ExcelUploadController::class, 'store']);
 Route::get('/showform', [ExcelUploadController::class, 'showForm']);
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
